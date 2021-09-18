@@ -5,7 +5,7 @@ var btnTranslate= document.querySelector("#btnTranslate");
 var txtInput= document.querySelector("#textarea");
 var outputDiv = document.querySelector("#output");
 
-var serverURL= "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+var serverURL= "https://api.funtranslations.com/translate/sindarin.json"
 
 
 function getTranslationURL(text){
@@ -14,6 +14,10 @@ function getTranslationURL(text){
    return url
 }
 
+function errorHandler(error){
+    console.log("error occured",error)
+    alert('something wrong try again later');
+}
 function clickHandler()
 {
     // outputDiv.innerText = "kfgjhad;o"+ txtInput.value; 
@@ -21,6 +25,7 @@ function clickHandler()
 
     fetch(getTranslationURL(inputText))
     .then(response=>response.json())
-    .then(json => console.log(json))
+    .then(json => console.log(json.contents.translated))
+    .catch(errorHandler)
 };
 btnTranslate.addEventListener("click",clickHandler)
