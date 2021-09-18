@@ -3,10 +3,12 @@
 // alert(welcomeMessage);
 var btnTranslate= document.querySelector("#btnTranslate");
 var txtInput= document.querySelector("#textarea");
-console.log("txtInput");
+var outputDiv = document.querySelector("#output");
+
+
+
 function clickHandler()
 {
-    console.log("clicked!");
-    console.log("input", txtInput.value);
+    outputDiv.innerText = "kfgjhad;o"+ txtInput.value; 
 };
 btnTranslate.addEventListener("click",clickHandler)
