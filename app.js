@@ -9,7 +9,9 @@ var serverURL= "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
 
 
 function getTranslationURL(text){
-    return serverURL ="?"+"text=" +text
+    var url= serverURL +"?"+"text=" +text
+   console.log(url)
+   return url
 }
 
 function clickHandler()
@@ -19,6 +21,6 @@ function clickHandler()
 
     fetch(getTranslationURL(inputText))
     .then(response=>response.json())
-    .then(json=> console.log(json))
+    .then(json => console.log(json))
 };
 btnTranslate.addEventListener("click",clickHandler)
