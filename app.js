@@ -9,9 +9,10 @@ var serverURL= "https://api.funtranslations.com/translate/minion.json"
 
 
 function getTranslationURL(text){
-    var url= serverURL +"?"+"text=" +text
-   console.log(url)
+    var url= serverURL +"?"+"text=" +text;
+   console.log(url);
    return url
+   
 }
 
 function errorHandler(error){
@@ -20,12 +21,15 @@ function errorHandler(error){
 }
 function clickHandler()
 {
-    // outputDiv.innerText = "kfgjhad;o"+ txtInput.value; 
+    //
     var inputText= txtInput.value;
 
     fetch(getTranslationURL(inputText))
     .then(response=>response.json())
-    .then(json => console.log(json.contents.translated))
+    .then(json => {
+        var translatedText=json.contents.translated;
+        outputDiv.innerText = translatedText ; 
+    })
     .catch(errorHandler)
 };
 btnTranslate.addEventListener("click",clickHandler)
