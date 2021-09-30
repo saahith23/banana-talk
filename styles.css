@@ -1,7 +1,29 @@
 
+
 .body{
+   
     text-align: center;
 }
 .h1{
-    background-color:#49a0eb ;
+    padding: 2rem 2rem;
+    background-color: #80d4ff;
+}
+.footer{
+    padding: 5rem 5rem;
+    background-color: #80d4ff;
+    font-size: large;
+}
+ .h3{
+    font-size: larger;
+}
+#btnTranslate{
+    
+    background-color:white;
+    margin:1rem 0rem;
+    font-size: large;
+    border-color:#80d4ff ;
+    color:black;
+    border-radius: 0.8rem;
+    padding:0.5rem 1rem;
+    
 }
