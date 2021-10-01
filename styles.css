@@ -3,14 +3,15 @@
 .body{
    
     text-align: center;
+    background-color: azure;
 }
-.h1{
+h1{
     padding: 2rem 2rem;
-    background-color: #80d4ff;
+    background-color:aqua;
 }
 .footer{
     padding: 5rem 5rem;
-    background-color: #80d4ff;
+    background-color: aqua;
     font-size: large;
 }
  .h3{
@@ -18,8 +19,8 @@
 }
 #btnTranslate{
     
-    background-color:white;
-    margin:1rem 0rem;
+    background-color:aqua;
+    margin:1rem 0;
     font-size: large;
     border-color:#80d4ff ;
     color:black;
